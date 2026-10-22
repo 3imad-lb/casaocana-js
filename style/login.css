@@ -1,0 +1,35 @@
+#divlogin{
+    width: 30%;
+    margin-left: 30%;
+    padding: 3% 2% 3% 10%;
+}
+#selectlogin{
+    margin-left: 3%;
+}
+#submitbutton{
+    padding-right: 4%;
+    margin-left: 14%;
+    background-color:rgb(0, 255, 170);
+    cursor: pointer;
+}
+#submitbutton:hover{
+    box-shadow: 0px 0px 0px 0PX black;
+}
+input,select{
+    height: 50px;
+}
+
+
+@media only screen and (max-width: 360px) {
+    #divlogin{
+        width: 68%;
+        margin: 10%;
+        padding: 5%;
+    }
+    #submitbutton{
+        padding-right: 4%;
+        margin-left:20%;
+        background-color:rgb(0, 255, 170);
+        cursor: pointer;
+    }
+}

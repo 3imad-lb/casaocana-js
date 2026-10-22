@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: Roboto;
+    margin: 0%;
+}
+.spaceenenly{
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    background-image: url("../images/back2.svg");
+    background-size: cover;
+  }
+
+nav{
+    background-color:white;
+    padding: 0% 5% 0% 5%;
+}
+ul li{
+    display: inline;
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #c90505;
+    margin-left: 5%;
+}
+nav a:hover{
+    color: black;
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    width: 100%;
+    padding-left: 0%;
+}
+#anav{
+    width: 70%;
+}
+#anav3{
+    width: 12%;
+    display: block;
+}
+#anav2{
+    width: 20%;
+}
+#h{
+    color:black;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    
+}
+#h h1,button{
+    margin:2%;
+}
+.shadow{
+    box-shadow: 2px 2px 15px 5px black;
+}
+.rounded{
+    border-radius: 10px;
+    background-color:white;
+    margin: 3%;
+}
+#blacka{
+    color:black;
+}
+.buttonstyle{
+    border-radius: 10px;
+    border :none;
+    box-shadow: 1px 1px 10px 2PX black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    color:#c90505;
+    background-color:white;
+}
+.buttonstyle:hover{
+    box-shadow: 0px 0px 0px 0PX black;
+}
+button:hover{
+    cursor: pointer;
+}
+table{
+    width: 100%;
+}
+.shadowgray{
+    box-shadow: 2px 2px 10px 5px gray;
+    padding: 2%;
+}
+input,select{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 15px;
+    margin: 1%;
+    font-size: 20px;
+    padding-left: 5%;
+}
+input::placeholder{
+    font-size: 20px;
+    padding: 1%;
+}
+#reste{
+    padding: 10%;
+}
+.inputcharges{
+    padding: 2%;
+}
+.inputcharge:placeholder{
+    font-style: italic;
+}
+.inputEntree{
+    width: 80px;
+}
+.divChargeHeight{
+    height: 100px;
+}
+.buttoni{
+    font-size: 40px;
+}
+.inpandbtn{
+    height:60px;
+    width: 60px;
+}
+button{
+    border:none;
+    border-radius:5px;
+    background-color:white;
+}
+button:hover{
+    background-color:#ffb9b9;
+}
+#type{
+    height: 80px;
+}
+.ilabel{
+    font-size: 20px;
+    cursor: pointer;
+}
+.ilabel:hover{
+    color: rgb(4, 215, 152);
+}
+#add{
+    font-size: 50px;
+}
+.trcharge td{
+   font-weight: bold;
+   font-size: 20px;
+   padding: 0% 0% 0% 2%;
+}
+.trcharge td Button{
+    font-size: 30px;
+}    
+#myFile{
+    width: 165px;
+    font-size: 20px;
+    height: 28px;
+    padding: 0%;
+    cursor: pointer;
+}
+#val{
+    width: 100px;
+}
+#inputs{
+    background-color:#c90505;
+}
+#label{
+    width: 240px;
+}
+.spaceflex{
+    display: flex;
+    justify-content:space-evenly;
+}
+#fileentree{
+    width: 165px;
+    height: 28px;
+}
+details{
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #c90505;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+}
+details a:hover{
+    background-color:#ffb9b9;
+}
+#nombre{
+    width: 40px;
+}
+
+/* Mode sombre */
+.dark-mode #h {
+    background-color: #1e1e1e; /* Fond sombre */
+    color: #ffffff;           /* Texte clair */
+    border: 1px solid #444444; /* Optionnel : ajout d'une bordure claire */
+}
+
+/* Image de fond pour le mode sombre */
+.dark-mode {
+    background-image: url("../images/backcasaocana21.png");
+    background-size:cover;
+}
+
+
+.dark-mode nav {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode table {
+    background-color: #222222;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+.dark-mode th, .dark-mode td {
+    border-color: #444444;
+}
+
+.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+#darkModeToggle{
+    border-radius:100%;
+    height: 40px;
+    width: 40px;
+    background-color:black;
+    padding-left: 6px;
+
+}
+#darkModeToggle:hover{
+   background-color:white;
+}
+.dark-mode a {
+    color: #ffb9b9;
+}
+
+.dark-mode #reste {
+    background-color: black;
+    color: white;
+}
+
+
+#banner{
+    background-image:url("../images/banner1.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 509px;
+}
+.dark-mode #banner{
+    background-image:url("../images/BANNER2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 509px;
+}
+/*fzefzefzfzfzfzfzfzfzfzfz*/
+
+@media only screen and (max-width: 360px) {
+    .spaceenenly{
+        display:block;
+        
+    }
+
+    body {
+        background-image: url("../images/back2.svg");
+        background-size: cover;
+        
+      }
+
+    nav{
+        background-color:white;
+        width: 100%;
+        padding: 5% 0% 1% 0%;
+    }
+    ul li{
+        display: block;
+        text-align: center;
+    }
+    ul{
+        padding-left: 0%;
+    }
+    nav a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: #c90505;
+        margin-left: 5%;
+    }
+    nav div{
+        display: block;
+        
+    }
+    nav ul{
+        width: 100%;
+    }
+    .imglogo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #anav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #anav3{
+        width: 100%;
+        display: block;
+    }
+    #anav2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom:15%;
+    }
+    #h{
+        color:black;
+        display: block;
+        text-align: center;
+        margin: 10% 0% 10% 0%;
+        padding: 5% 0% 5% 0%;
+    }
+    #h h1,button{
+        margin:2%;
+    }
+    .shadow{
+        box-shadow: 2px 2px 15px 5px black;
+    }
+    .rounded{
+        border-radius: 10px;
+        background-color:white;
+        margin: 1%;
+        margin-top: 10%;
+        width: 100%;
+    }
+    #blacka{
+        color:black;
+    }
+    .buttonstyle{
+        border-radius: 10px;
+        border :none;
+        box-shadow: 1px 1px 10px 2PX black;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 20px 0px 20px;
+        color:#c90505;
+        background-color:white;
+    }
+    .buttonstyle:hover{
+        box-shadow: 0px 0px 0px 0PX black;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    table{
+        width: 100%;
+    }
+    .shadowgray{
+        box-shadow: 2px 2px 10px 5px gray;
+        padding: 2%;
+    }
+    input,select{
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 15px;
+        margin: 1%;
+        font-size: 20px;
+        padding-left: 5%;
+    }
+    input::placeholder{
+        font-size: 20px;
+        padding: 1%;
+    }
+    #reste{
+        padding: 10%;
+    }
+    .inputcharges{
+        padding: 2%;
+    }
+    .inputcharge:placeholder{
+        font-style: italic;
+    }
+    .inputEntree{
+        width: 80px;
+    }
+    .divChargeHeight{
+        height: 100px;
+    }
+    .buttoni{
+        font-size: 40px;
+    }
+    .inpandbtn{
+        height:60px;
+        width: 60px;
+    }
+    button{
+        border:none;
+        border-radius:5px;
+        background-color:white;
+    }
+    button:hover{
+        background-color:#ffb9b9;
+    }
+    #type{
+        height: 80px;
+    }
+    .ilabel{
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .ilabel:hover{
+        color: rgb(4, 215, 152);
+    }
+    #add{
+        font-size: 50px;
+    }
+    .trcharge td{
+       font-weight: bold;
+       font-size: 20px;
+       padding: 0% 0% 0% 2%;
+    }
+    .trcharge td Button{
+        font-size: 30px;
+    }    
+    #myFile{
+        width: 165px;
+        font-size: 20px;
+        height: 28px;
+        padding: 0%;
+        cursor: pointer;
+    }
+    #val{
+        width: 100px;
+    }
+    #inputs{
+        background-color:#c90505;
+    }
+    #label{
+        width: 240px;
+    }
+    .spaceflex{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    #fileentree{
+        width: 165px;
+        height: 28px;
+    }
+    details{
+        display: inline;
+        margin-left: 3%;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: #c90505;
+        cursor: pointer;
+        width: 20%;
+        text-align: center;
+    }
+    details a:hover{
+        background-color:#ffb9b9;
+    }
+    #nombre{
+        width: 40px;
+    }
+
+
+
+
+  }

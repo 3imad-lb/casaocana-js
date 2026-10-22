@@ -1,0 +1,15 @@
+.succesGreenBackground{
+   background-color: rgb(4, 215, 152);
+   color:white;
+}
+.dangerBackground{
+    background-color: #c90505;
+    color:white;
+ }
+ .infoBackground{
+    background-color: blue;
+    color:white;
+ }
+ td{
+   text-align: center;
+ }

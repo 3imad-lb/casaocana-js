@@ -1,0 +1,18 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary Microsoft Office files
+~$*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# Dependencies and logs
+node_modules/
+*.log

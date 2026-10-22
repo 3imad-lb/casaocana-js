@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaOcaca calcule des charges</title>
+    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/historique.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav class="shadow">
+        <div class="spaceenenly">
+        <div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <div id="anav">
+            <ul>
+                <li><a href="calcule.html">Calcule de journée</a></li>
+            <li><a href="ustensiles.html" target="_blank">Gestion d'ustentiles</a></li>
+            <li><a href="gestionst.html" target="_blank">Gestion de stock</a></li>
+            </ul>
+        </div>
+
+        <div id="anav4">
+            <button id="darkModeToggle" class="buttonstyle">🌙</button>
+        </div>
+    </div>
+</nav>  
+    
+    <form action="">
+        <div id="h" class="shadow rounded">
+            <h1>Nom caissier</h1>
+            <h1>Date </h1>
+            <h1>Heure </h1>
+            
+            
+            <button class="buttonstyle" onclick="window.print();">Imprimer <i class="fa-solid fa-print"></i></button>
+        </div>
+    </form>    
+    
+        <div class="shadow rounded paddingdiv">
+            
+          <form action="">
+            <table border="1">
+        
+                <tr style="font-size: 22px;background-color:#ffb9b9;">
+                    <th>Ustensiles</th>
+                    <th>Sortie</th>
+                    <th>Action</th>
+                    <th>Nombre</th>
+                </tr>
+
+                <tr class="trcharge">
+                    <td>Plat Grand</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre"  min="0">
+                    </td>
+                </tr>
+        
+                <tr class="trcharge">
+                    <td>Plat petit</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre"  min="0">
+                    </td>
+                </tr>
+
+                
+                <tr class="trcharge">
+                    <td>Fourchette</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre"  min="0">
+                    </td>
+                </tr>
+                
+                <tr class="trcharge">
+                    <td>cuillère</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre"  min="0">
+                    </td>
+                </tr>
+
+                <tr class="trcharge">
+                    <td>couteau</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre"  min="0">
+                    </td>
+                </tr>
+
+                <tr class="trcharge">
+                    <td>Goblet</td>
+                    <td class="sortie" width="100px">0</td>
+                    <td width="180px">
+                        <Button type="button" style="color: rgb(4, 215, 152);" class="add inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                        <Button type="button" style="color: red;"  class="subtract inpandbtn"><i class="fa-solid fa-square-minus buttoni" id="add"></i></Button>
+                        
+                    </td>
+                    <td width="100px">
+                        <input type="number" class="nombre" placeholder="Nombre" value=1 id="nombre" min="0">
+                    </td>
+                </tr>
+
+
+            </table>
+          </form>  
+       </div>
+
+    
+       <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation de la date et de l'heure
+            const dateElement = document.querySelector("#h h1:nth-child(2)");
+            const heureElement = document.querySelector("#h h1:nth-child(3)");
+        
+            const updateDateTime = () => {
+                const now = new Date();
+                dateElement.textContent = `Date : ${now.toLocaleDateString()}`;
+                heureElement.textContent = `Heure : ${now.toLocaleTimeString()}`;
+            };
+        
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        
+            // Demander le nom une seule fois au chargement de la page
+            const stockManagerName = prompt("Entrez le nom du gestionnaire d'ustensiles :", "Gestionnaire");
+            const nameElement = document.querySelector("#h h1:first-child");
+            nameElement.textContent = `Nom caissier : ${stockManagerName}`;
+        
+            // Gestion des boutons Ajouter et Soustraire
+            document.querySelectorAll("tr.trcharge").forEach(row => {
+                const addButton = row.querySelector(".add");
+                const subtractButton = row.querySelector(".subtract");
+                const sortieCell = row.querySelector(".sortie");
+                const inputField = row.querySelector(".nombre");
+        
+                // Bouton Ajouter (vert)
+                addButton.addEventListener("click", (e) => {
+                    e.preventDefault(); // Empêche tout comportement par défaut
+                    const inputValue = parseInt(inputField.value) || 0;
+                    const currentValue = parseInt(sortieCell.textContent) || 0;
+                    sortieCell.textContent = currentValue + inputValue;
+                });
+        
+                // Bouton Soustraire (rouge)
+                subtractButton.addEventListener("click", (e) => {
+                    e.preventDefault(); // Empêche tout comportement par défaut
+                    const inputValue = parseInt(inputField.value) || 0;
+                    const currentValue = parseInt(sortieCell.textContent) || 0;
+                    const newValue = currentValue - inputValue;
+                    sortieCell.textContent = newValue < 0 ? 0 : newValue; // Empêche les valeurs négatives
+                });
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Vérifie si un mode est déjà enregistré dans localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        enableDarkMode();
+    }
+
+    // Basculer entre les modes
+    toggleButton.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+
+    function enableDarkMode() {
+        body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+        toggleButton.textContent = "☀️";
+    }
+
+    function disableDarkMode() {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+        toggleButton.textContent = "🌙";
+    }
+});
+
+        </script>
+        
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaOcaca calcule des charges</title>
+    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/historique.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav class="shadow">
+        <div class="spaceenenly">
+        <div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <div id="anav">
+            <ul>
+                <li><a href="calcule.html">Calcule de journée</a></li>
+            <li><a href="ustensiles.html" target="_blank">Gestion d'ustentiles</a></li>
+            <li><a href="gestionst.html" target="_blank">Gestion de stock</a></li>
+            </ul>
+        </div>
+
+        <div id="anav4">
+            <button id="darkModeToggle" class="buttonstyle">🌙</button>
+        </div>
+    </div>
+</nav>  
+    
+<div class="shadow rounded" style="padding: 5%;" id="banner">
+    <img src="images/logo.png" alt="" width="140px" >
+    <h1 style="color: #c90505;">VERSION 1.0</h1>
+</div>
+
+    
+       <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Vérifie si un mode est déjà enregistré dans localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        enableDarkMode();
+    }
+
+    // Basculer entre les modes
+    toggleButton.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+
+    function enableDarkMode() {
+        body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+        toggleButton.textContent = "☀️";
+    }
+
+    function disableDarkMode() {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+        toggleButton.textContent = "🌙";
+    }
+});
+
+        </script>
+        
+
+</body>
+</html>

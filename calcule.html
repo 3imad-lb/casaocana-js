@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaOcaca calcule des charges</title>
+    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    
+    <nav class="shadow">
+        <div class="spaceenenly">
+        <div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <div id="anav">
+            <ul>
+                <li><a href="calcule.html">Calcule de journée</a></li>
+            <li><a href="ustensiles.html" target="_blank">Gestion d'ustentiles</a></li>
+            <li><a href="gestionst.html" target="_blank">Gestion de stock</a></li>
+            </ul>
+        </div>
+
+        <div id="anav4">
+            <button id="darkModeToggle" class="buttonstyle">🌙</button>
+        </div>
+    </div>
+</nav>  
+
+    <form action="">
+    <div id="h" class="rounded shadow">
+        <h1>Nom caissier</h1>
+        <h1>Date </h1>
+        <h1>Heure </h1>
+        <button name="calculer" class="buttonstyle">Calculer <i class="fa-solid fa-calculator"></i></button>
+        <button class="buttonstyle" onclick="window.print();">Imprimer <i class="fa-solid fa-print"></i></button>
+    </div>
+
+    <div class="shadow rounded">
+    <table border="1">
+        <tr>
+        <th width="10%">
+            
+                <h2>L'entrée :</h2>
+                <input name="entree" type="number" class="inputEntree"> dh
+                <input type="file" id="myFile" name="filename">
+            
+        </th>
+        <th width="18%">
+           
+                <h2>CHARGES : <span style="color: red;">0</span> dh</h2>
+            
+        </th>
+        <th width="16%">
+            
+            <h2>Le reste : <span style="color: blue;">0</span> dh</h2>
+        
+        </th>
+        <th width="16%">
+            
+                <h2>La caisse : <br><input name="caisse" type="number" class="inputEntree"> dh</h2>
+           
+        </th>
+        <th width="16%">
+            <div class="shadowgray rounded" id="reste">
+                <h2>Manque/addition : <span style="color: rgb(1, 123, 86);">0</span> dh</h2>
+            </div>
+        </th>
+        </tr>
+        <tr>
+            <td colspan="4" id="inputs">
+                
+                    <input name="valeure" type="number" placeholder="Valeure" class="inputcharges" id="val">
+                    <select name="type" class="inputcharges" id="type" >
+                        <option value="Type">Type</option>
+                        <option value="Crédit">Crédit</option>
+                        <option value="Police">Police</option>
+                        <option value="Sécurité">Sécurité</option>
+                        <option value="Avance">Avance</option>
+                        <option value="Repas autorisée">Repas autorisée</option>
+                        <option value="Facture non payé">Facture non payé</option>
+                        <option value="Marchandise">Marchandise</option>
+                        <option value="Douane">Douane</option>
+                        <option value="Autres">Autres</option>
+                    </select>
+                    <input name="label" type="text" placeholder="label" class="inputcharges" id="label">
+                    
+                    
+            </td>
+            <td id="inputs">
+                <Button name="ajouter" style="color: rgb(4, 215, 152);" class="inpandbtn"><i class="fa-solid fa-square-plus buttoni" id="add"></i></Button>
+                
+               
+            </td>
+        </tr>
+        
+        
+    </table>
+    </div>
+    </form>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation de la date et de l'heure
+            const dateElement = document.querySelector("h1:nth-child(2)");
+            const heureElement = document.querySelector("h1:nth-child(3)");
+        
+            const updateDateTime = () => {
+                const now = new Date();
+                dateElement.textContent = `Date : ${now.toLocaleDateString()}`;
+                heureElement.textContent = `Heure : ${now.toLocaleTimeString()}`;
+            };
+        
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        
+            // Demander le nom du caissier une seule fois
+            const stockManagerName = prompt("Entrez le nom du gestionnaire du caissier :", "caissier");
+            const nameElement = document.querySelector("#h h1:first-child");
+            nameElement.textContent = `Nom caissier : ${stockManagerName}`;
+
+
+             // Gestion du bouton Calculer
+             document.querySelector("button[name='calculer']").addEventListener("click", (e) => {
+                e.preventDefault();
+        
+                const entree = parseFloat(document.querySelector("input[name='entree']").value) || 0;
+                const caisse = parseFloat(document.querySelector("input[name='caisse']").value) || 0;
+        
+                // Somme des valeurs des charges dans les lignes dynamiques uniquement
+                const chargeValues = Array.from(document.querySelectorAll(".trcharge td:first-child"))
+                    .map(td => parseFloat(td.textContent) || 0);
+                const totalCharges = chargeValues.reduce((acc, val) => acc + val, 0);
+        
+                document.querySelector("th:nth-child(2) span").textContent = totalCharges;
+        
+                // Calcul du reste
+                const reste = entree - totalCharges;
+                document.querySelector("th:nth-child(3) span").textContent = reste;
+        
+                // Calcul du manque/addition
+                const manqueAddition = caisse - reste;
+                document.querySelector("th:nth-child(5) span").textContent = manqueAddition;
+            });
+        
+        
+            // Ajouter une nouvelle ligne
+            document.querySelector("button[name='ajouter']").addEventListener("click", (e) => {
+                e.preventDefault();
+        
+                const valInput = parseFloat(document.querySelector("#val").value) || 0;
+                const typeInput = document.querySelector("#type").value || "Non spécifié";
+                const labelInput = document.querySelector("#label").value || "Sans label";
+        
+                if (!valInput || typeInput === "Type" || !labelInput) {
+                    alert("Veuillez remplir tous les champs correctement.");
+                    return;
+                }
+        
+                // Créer une nouvelle ligne avec les données des champs d'entrée
+                const newRow = document.createElement("tr");
+                newRow.classList.add("trcharge");
+                newRow.innerHTML = `
+                    <td>${valInput}</td>
+                    <td>${typeInput}</td>
+                    <td>${labelInput}</td>
+                    <td colspan="2">
+                        <button class="modifier" style="color: deepskyblue;">Modifier</button>
+                        <button class="supprimer" style="color: red;">Supprimer</button>
+                    </td>
+                `;
+        
+                document.querySelector("table").appendChild(newRow);
+        
+                // Réinitialiser les champs de saisie
+                document.querySelector("#val").value = "";
+                document.querySelector("#type").value = "Type";
+                document.querySelector("#label").value = "";
+            });
+        
+            // Gestion des boutons Modifier et Supprimer
+            document.querySelector("table").addEventListener("click", (e) => {
+                const row = e.target.closest("tr");
+        
+                // Supprimer une ligne
+                if (e.target.classList.contains("supprimer")) {
+                    row.remove();
+                }
+        
+                // Modifier une ligne (aperçu dans les champs de saisie)
+                if (e.target.classList.contains("modifier")) {
+                    const valInput = row.querySelector("td:nth-child(1)").textContent.trim();
+                    const typeInput = row.querySelector("td:nth-child(2)").textContent.trim();
+                    const labelInput = row.querySelector("td:nth-child(3)").textContent.trim();
+        
+                    // Remplir les champs de saisie avec les données de la ligne
+                    document.querySelector("#val").value = valInput;
+                    document.querySelector("#type").value = typeInput;
+                    document.querySelector("#label").value = labelInput;
+        
+                    // Supprimer la ligne après transfert des données
+                    row.remove();
+                }
+            });
+        
+
+         // Mode sombre
+         const toggleButton = document.getElementById("darkModeToggle");
+            const body = document.body;
+        
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                enableDarkMode();
+            }
+        
+            toggleButton.addEventListener("click", () => {
+                if (body.classList.contains("dark-mode")) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+        
+            function enableDarkMode() {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+                toggleButton.textContent = "☀️";
+            }
+        
+            function disableDarkMode() {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+                toggleButton.textContent = "🌙";
+            }
+        });
+        </script>
+        
+
+
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation de la date et de l'heure
+            const dateElement = document.querySelector("h1:nth-child(2)");
+            const heureElement = document.querySelector("h1:nth-child(3)");
+        
+            const updateDateTime = () => {
+                const now = new Date();
+                dateElement.textContent = `Date : ${now.toLocaleDateString()}`;
+                heureElement.textContent = `Heure : ${now.toLocaleTimeString()}`;
+            };
+        
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        
+            // Demander le nom du caissier une seule fois
+            const stockManagerName = prompt("Entrez le nom du gestionnaire du caissier :", "caissier");
+            const nameElement = document.querySelector("#h h1:first-child");
+            nameElement.textContent = `Nom caissier : ${stockManagerName}`;
+        
+            // Gestion du bouton Calculer
+            document.querySelector("button[name='calculer']").addEventListener("click", (e) => {
+                e.preventDefault();
+        
+                const entree = parseFloat(document.querySelector("input[name='entree']").value) || 0;
+                const caisse = parseFloat(document.querySelector("input[name='caisse']").value) || 0;
+        
+                // Somme des valeurs des charges dans les lignes dynamiques uniquement
+                const chargeValues = Array.from(document.querySelectorAll(".trcharge td:first-child"))
+                    .map(td => parseFloat(td.textContent) || 0);
+                const totalCharges = chargeValues.reduce((acc, val) => acc + val, 0);
+        
+                document.querySelector("th:nth-child(2) span").textContent = totalCharges;
+        
+                // Calcul du reste
+                const reste = entree - totalCharges;
+                document.querySelector("th:nth-child(3) span").textContent = reste;
+        
+                // Calcul du manque/addition
+                const manqueAddition = caisse - reste;
+                document.querySelector("th:nth-child(5) span").textContent = manqueAddition;
+            });
+        
+            // Ajouter une nouvelle ligne ou modifier une ligne existante
+            let rowToEdit = null; // Variable pour stocker la ligne en cours de modification
+            document.querySelector("button[name='ajouter']").addEventListener("click", (e) => {
+                e.preventDefault();
+        
+                const valInput = parseFloat(document.querySelector("#val").value) || 0;
+                const typeInput = document.querySelector("#type").value || "Non spécifié";
+                const labelInput = document.querySelector("#label").value || "Sans label";
+        
+                if (!valInput || typeInput === "Type" || !labelInput) {
+                    alert("Veuillez remplir tous les champs correctement.");
+                    return;
+                }
+        
+                if (rowToEdit) {
+                    // Modifier une ligne existante
+                    rowToEdit.querySelector("td:nth-child(1)").textContent = valInput;
+                    rowToEdit.querySelector("td:nth-child(2)").textContent = typeInput;
+                    rowToEdit.querySelector("td:nth-child(3)").textContent = labelInput;
+                    rowToEdit = null; // Réinitialiser la variable après modification
+                } else {
+                    // Ajouter une nouvelle ligne
+                    const newRow = document.createElement("tr");
+                    newRow.classList.add("trcharge");
+                    newRow.innerHTML = `
+                        <td>${valInput}</td>
+                        <td>${typeInput}</td>
+                        <td>${labelInput}</td>
+                        <td colspan="2">
+                            <button class="modifier" style="color: deepskyblue;">Modifier</button>
+                            <button class="supprimer" style="color: red;">Supprimer</button>
+                        </td>
+                    `;
+        
+                    document.querySelector("table").appendChild(newRow);
+                }
+        
+                // Réinitialiser les champs de saisie
+                document.querySelector("#val").value = "";
+                document.querySelector("#type").value = "Type";
+                document.querySelector("#label").value = "";
+            });
+        
+            // Gestion des boutons Modifier et Supprimer
+            document.querySelector("table").addEventListener("click", (e) => {
+                const row = e.target.closest("tr");
+        
+                // Supprimer une ligne
+                if (e.target.classList.contains("supprimer")) {
+                    row.remove();
+                }
+        
+                // Modifier une ligne (aperçu + suppression de la ligne)
+                if (e.target.classList.contains("modifier")) {
+                    rowToEdit = row; // Stocker la ligne en cours de modification
+                    const valInput = row.querySelector("td:nth-child(1)").textContent.trim();
+                    const typeInput = row.querySelector("td:nth-child(2)").textContent.trim();
+                    const labelInput = row.querySelector("td:nth-child(3)").textContent.trim();
+        
+                    // Remplir les champs de saisie avec les données de la ligne
+                    document.querySelector("#val").value = valInput;
+                    document.querySelector("#type").value = typeInput;
+                    document.querySelector("#label").value = labelInput;
+        
+                    // Supprimer la ligne après transfert des données
+                    row.remove();
+                }
+            });
+        
+            // Mode sombre
+            const toggleButton = document.getElementById("darkModeToggle");
+            const body = document.body;
+        
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                enableDarkMode();
+            }
+        
+            toggleButton.addEventListener("click", () => {
+                if (body.classList.contains("dark-mode")) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+        
+            function enableDarkMode() {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+                toggleButton.textContent = "☀️";
+            }
+        
+            function disableDarkMode() {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+                toggleButton.textContent = "🌙";
+            }
+        });
+        </script> -->
+        
+        
+        
+
+</body>
+</html>

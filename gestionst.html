@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaOcaca calcule des charges</title>
+    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/gestionst.css">
+    <link rel="stylesheet" href="style/historique.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <nav class="shadow">
+        <div class="spaceenenly">
+        <div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <div id="anav">
+            <ul>
+                <li><a href="calcule.html">Calcule de journée</a></li>
+            <li><a href="ustensiles.html" target="_blank">Gestion d'ustentiles</a></li>
+            <li><a href="gestionst.html" target="_blank">Gestion de stock</a></li>
+            </ul>
+        </div>
+
+        <div id="anav4">
+            <button id="darkModeToggle" class="buttonstyle">🌙</button>
+        </div>
+    </div>
+</nav>  
+
+    <form action="">
+    <div id="h" class="rounded shadow">
+        <h1>Nom Gestionnaire de stock</h1>
+        <h1>Date </h1>
+        <h1>Heure </h1>
+        
+        <button class="buttonstyle" onclick="window.print();">Imprimer <i class="fa-solid fa-print"></i></button>
+    </div>
+
+    <div class="shadow rounded paddingdiv">
+    <table border="1">
+        
+        <tr style="font-size: 22px;background-color:#ffb9b9;">
+            <th width="8%" id="th1">Degré</th>
+            <th width="52%" id="th2">Produit</th>
+            <th width="20%" id="th3">Val</th>
+            <th width="20%" id="th4">Qté</th>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Carion</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Colacao</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Lipton</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Atay sultan 8</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Nescafe</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>thon</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Mozzarila</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Oeuf</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Zit l3oud</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>fromage</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Mortadelle</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Toast</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Fromage slice</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Tortilla tacos</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Hamburger</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Starbucks</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>energy drink</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Produit jaouda</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Orange</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Cannete</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>frite</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Poulet</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Saucice</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Fkhad</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Jna7</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Poulet Beldi</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Viande hachée</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Cordon blue</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>nugget</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Crevette</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Calamar</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Ration de poisson</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>anchoix</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>sardin</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>viande</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>melossa</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Harcha</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Rghayef</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>pain panini</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>petit pain</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>oulmess</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>eau</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Foie</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Madeline kbira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>madeline sghira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Pasta sghira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Pasta kbira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Bimo sghir</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Bimo kbir</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>3asser kbir</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>3asser sghir</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>zeri3a kbira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>zeri3a sghira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>chips kbira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>chips sghira</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>SUCRE morceau</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sucre granule</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>caramel</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>crème chantille</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>ROZ</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>T7in</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Beurre</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Ketchup</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Mayonnaise</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>7ar</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Amlou</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>miel</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>sauce hulala crème</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>loubia/3dess</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Algerien</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>barbecue</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Andalouse</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>biggy</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Conflex nature</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>li9ama</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>huile</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>javel</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>savon</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sani croix</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>1</td>
+            <td>Petit Goubelet</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>cuillere</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>clinix</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Moyenne Goubelet</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Grand Goubelet</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Grand Goubelet plastique (jus)</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Paille</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporté salade transparent</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>fourchette</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>SAC</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporté arrondi aluminium</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Souloufan</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporté moyenne aluminium</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporté pour sauce</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sachet tacos</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>plastique poubelle</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sachet plateau</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sachet frite</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporté grand</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>emporte petit</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Papier sand</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Pack hamburger</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Sfafet</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Citron</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>na3na3</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>Rbi3</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>lkhudra</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>zaytoun</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr class="trcharge">
+            <td>2</td>
+            <td>cornichon</td>
+            <td>
+                <input type="number" id="valst">
+            </td>
+            <td>
+                <select name="" id="Q">
+                    <option value="">unité</option>
+                    <option value="">Kg</option>
+                    <option value="">g</option>
+                </select>
+            </td>
+        </tr>
+
+        
+    </table>
+    </div>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation de la date et de l'heure
+            const dateElement = document.querySelector("#h h1:nth-child(2)");
+            const heureElement = document.querySelector("#h h1:nth-child(3)");
+        
+            const updateDateTime = () => {
+                const now = new Date();
+                dateElement.textContent = `Date : ${now.toLocaleDateString()}`;
+                heureElement.textContent = `Heure : ${now.toLocaleTimeString()}`;
+            };
+        
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        
+            // Demander le nom du gestionnaire de stock
+            const stockManagerName = prompt("Entrez le nom du gestionnaire de stock :", "Gestionnaire");
+            const nameElement = document.querySelector("#h h1:first-child");
+            nameElement.textContent = `Nom Gestionnaire de stock : ${stockManagerName}`;
+        
+            
+            // Le bouton Imprimer est déjà géré avec window.print()
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Vérifie si un mode est déjà enregistré dans localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        enableDarkMode();
+    }
+
+    // Basculer entre les modes
+    toggleButton.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+
+    function enableDarkMode() {
+        body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+        toggleButton.textContent = "☀️";
+    }
+
+    function disableDarkMode() {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+        toggleButton.textContent = "🌙";
+    }
+});
+        </script>
+        
+
+</body>
+</html>

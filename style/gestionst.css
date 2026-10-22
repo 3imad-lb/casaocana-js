@@ -1,0 +1,39 @@
+#valst{
+   width: 170px;
+   height: 45px;
+}
+#Q{
+   width: 170px;
+}
+
+@media only screen and (max-width: 360px) {
+
+   #valst{
+      width: 50px;
+      height: 45px;
+   }
+   #Q{
+      width: auto;
+   }
+
+#th1{
+   width:8%;
+   
+}
+#th2{
+   width:25%;
+}
+#th3{
+   width:15%;
+}
+#th4{
+   width:20%;
+   
+}
+
+button{
+   height: 40px;
+   margin-top: 5%;
+}
+
+}
